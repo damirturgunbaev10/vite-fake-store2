@@ -1,0 +1,114 @@
+.pageLayout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+.sidebarWrapper {
+  flex: 0 0 250px;
+  position: sticky;
+  top: 90px;
+  height: max-content;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.container {
+  flex: 1;
+  animation: fadeIn 0.5s ease-in-out;
+  min-width: 0;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: #86868b;
+  margin-bottom: 32px;
+}
+
+.loadingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: #007aff;
+  font-weight: 500;
+}
+
+.noProducts {
+  text-align: center;
+  padding: 50px 0;
+  color: #86868b;
+}
+
+.noProducts button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #007aff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.mobileFilterBtn {
+  display: none;
+}
+
+/* АНИМАЦИЯ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .pageLayout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mobileFilterBtn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #1d1d1f;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .sidebarWrapper {
+    position: static;
+    width: 100%;
+    flex: none;
+    display: none;
+  }
+
+  .sidebarWrapper.open {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}

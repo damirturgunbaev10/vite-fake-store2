@@ -1,0 +1,49 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cartRow {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+  transition: all 0.2s ease;
+}
+
+.cartRow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cartRow:active {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+  font-size: 14px;
+  color: #86868b;
+}
+
+.badge {
+  background: #e1f0ff;
+  color: #007aff;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 13px;
+}
+.loadingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: #007aff;
+  font-weight: 500;
+}
